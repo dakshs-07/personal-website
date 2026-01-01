@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Flask App</title>
-        <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+        <title>Car Enthusiast</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
     <body>
         <header>
             <div class="container">
-                <h1 class="logo">Daksh's web app</h1>
-                <strong><nav>
+                <h1 class="logo">Daksh's Car Site</h1>
+                <nav>
                     <ul class="menu">
                         <li><a href="{{ url_for('home') }}">Home</a></li>
                         <li><a href="{{ url_for('about') }}">About</a></li>
+                        <li><a href="{{ url_for('cars_page') }}">Cars</a></li>
                     </ul>
-                </nav></strong>
+                </nav>
             </div>
         </header>
         <div class="container">
-            {%block content%}
-            {%endblock%}
+            {% block content %}{% endblock %}
         </div>
     </body>
 </html>

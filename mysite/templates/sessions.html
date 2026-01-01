@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>My Sessions</h1>
+
+<ul>
+  {% for session in sessions %}
+    <li>
+      <strong>{{ session.name }}</strong>: {{ session.description }}
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>My Favorite Cars</h1>
+<ul>
+  {% for car in cars %}
+    <li>
+      <strong>{{ car.name }}</strong>: {{ car.description }}
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

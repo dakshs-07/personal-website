@@ -1,7 +1,24 @@
-{%extends "layout.html"%}
-{%block content%}
-<div class="home">
-  <h1>My homepage</h1>
-  <p>This is a test website</p>
-</div>
-{%endblock%}
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>{{ content.tagline }}</h1>
+<p>{{ content.bio }}</p>
+
+<h3>My Cars ({{ car_count }})</h3>
+<ul>
+  {% for car in cars %}
+    <li>
+      <strong>{{ car.name }}</strong>: {{ car.description }}
+    </li>
+  {% endfor %}
+</ul>
+
+<h3>Stats</h3>
+<ul>
+  {% for stat in stats %}
+    <li>{{ stat.label }}: {{ stat.value }}</li>
+  {% endfor %}
+</ul>
+
+<p><strong>Highlight Stat:</strong> {{ featured.label }}</p>
+{% endblock %}
