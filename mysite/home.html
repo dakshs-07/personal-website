@@ -1,0 +1,18 @@
+<h1>{{ content.tagline }}</h1>
+<p>{{ content.bio }}</p>
+
+<h3>What I Teach ({{ subject_count }})</h3>
+<ul>
+  {% for s in content.subjects %}
+    <li>{{ s }}</li>
+  {% endfor %}
+</ul>
+
+<h3>Stats</h3>
+<ul>
+  {% for stat in stats %}
+    <li>{{ stat.label }}: {{ stat.value }}</li>
+  {% endfor %}
+</ul>
+
+<p><strong>Highlight:</strong> {{ featured.label }}</p>
